@@ -18,3 +18,11 @@ console.log(last);
 console.log(job);
 console.log(first);
 // console.log(age);   // Uncaught ReferenceError ReferenceError: age is not defined
+
+// Object destructuring can be perfomed on a function argument
+const greet = ({first, last, title }) => { console.log(`Hello, ${first ? first : (title ? title : "X") } ${last}!`)};
+
+greet(person)
+
+const person2 = {last: "Caesar", title: "Emperor"};
+greet(person2);
