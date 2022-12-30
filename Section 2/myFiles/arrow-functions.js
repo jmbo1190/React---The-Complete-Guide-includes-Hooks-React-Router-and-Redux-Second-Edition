@@ -16,7 +16,8 @@
     const twice = number => 2 * number;
     const product = (a,b) => a * b;
 
-
+// Note: 'this' keyword in Arrow Functions is always handled as expected
+//       (contrary to what happens with regular functions definitions)
 printMyArgFun('Max', 12);
 
 printMyName();
