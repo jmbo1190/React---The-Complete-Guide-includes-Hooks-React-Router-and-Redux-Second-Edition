@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react';  // previously needed, 
+                            // but now automatically done under the hood and optional
 
 import ExpenseForm from './ExpenseForm';
 import './NewExpense.css';
