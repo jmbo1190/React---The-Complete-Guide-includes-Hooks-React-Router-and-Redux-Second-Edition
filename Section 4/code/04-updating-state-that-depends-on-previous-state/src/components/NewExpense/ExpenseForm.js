@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
+  // - Here we retain individual states independently of each other -
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
+
+  // - We could alternatively retain the 3  states grouped in a single object -
   // const [userInput, setUserInput] = useState({
   //   enteredTitle: '',
   //   enteredAmount: '',
@@ -14,10 +17,14 @@ const ExpenseForm = () => {
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
+    // - This way of updating a single field of an object should generally work -
+    // - but could fail in some cases if the "old" value of the object has become outdated -
     // setUserInput({
     //   ...userInput,
     //   enteredTitle: event.target.value,
     // });
+
+    // - This would be a better way of ensuring the previous state has not become outdated -
     // setUserInput((prevState) => {
     //   return { ...prevState, enteredTitle: event.target.value };
     // });
