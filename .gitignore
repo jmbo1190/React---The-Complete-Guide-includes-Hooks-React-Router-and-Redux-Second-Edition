@@ -1,2 +1,4 @@
 node_modules/
 **/code/perso/my-app/
+.eslintcache
+package-lock.json
